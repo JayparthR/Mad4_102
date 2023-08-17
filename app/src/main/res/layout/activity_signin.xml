@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/guni_pink_logo">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/DoNotHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.300"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFFFF"
+        android:text="Log In"
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/DoNotHaveAnAccount"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView">
+
+    </Button>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/UserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="User Full Name"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextUserFullName"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cardview_default_radius"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/UserFullName"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/PhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Phone Number"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextPhoneNumber"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toEndOf="@id/PhoneNumber"
+                app:layout_constraintTop_toBottomOf="@id/EditTextUserFullName">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="City"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextCity"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.785"
+                app:layout_constraintStart_toEndOf="@id/City"
+                app:layout_constraintTop_toBottomOf="@id/EditTextPhoneNumber">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Email"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextEmail"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.767"
+                app:layout_constraintStart_toEndOf="@id/Email"
+                app:layout_constraintTop_toBottomOf="@id/City">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Password"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextPassword"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="numberPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.704"
+                app:layout_constraintStart_toEndOf="@id/Password"
+                app:layout_constraintTop_toBottomOf="@id/Email">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/ConformPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Conform Password"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/EditTextConformPassword"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/EditTextConformPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.103"
+                app:layout_constraintStart_toEndOf="@id/ConformPassword"
+                app:layout_constraintTop_toBottomOf="@id/Password">
+
+            </EditText>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
